@@ -1,0 +1,46 @@
+// tsconfig.json
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "noFallthroughCasesInSwitch": true,
+        "skipLibCheck": true,
+        "composite": false,
+        "declaration": false,
+        "module": "esnext",
+        "target": "es5",
+        "jsx": "preserve",
+        "lib": [ "dom", "dom.iterable", "esnext" ],
+        "strict": false,
+        "noEmit": false,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "allowJs": true,
+        "noImplicitAny": false,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "removeComments": false,
+        "sourceMap": true,
+        "inlineSources": true,
+        "rootDirs": [
+            "src"
+        ]
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "./node_modules/*",
+        "./public/*",
+        "./.cache/*"
+    ],
+    "rules": {
+        "no-console": false
+    },
+    "jsRules": {
+        "no-console": false
+    }
+}
