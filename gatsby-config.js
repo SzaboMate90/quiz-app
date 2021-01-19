@@ -4,9 +4,9 @@ module.exports = {
     description: `Cool Quiz game where you can answer for awesome questions.`,
   },
   plugins: [
+    `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    'gatsby-plugin-typescript',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-layout',
