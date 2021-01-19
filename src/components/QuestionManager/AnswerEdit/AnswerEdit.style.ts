@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { CheckCircle } from '@styled-icons/boxicons-regular';
+import Breakpoints from "../../../styles/Breakpoints";
 
 export const StyledCorrectMark = styled(CheckCircle)`
   position: absolute;
@@ -26,4 +27,9 @@ export const StyledContainer = styled.div`
       opacity: 1;
     }
   }
+  
+  ${Breakpoints.small(`
+     width: calc(100% - 40px);
+     margin: 5px 10px;
+  `)}
 `;
