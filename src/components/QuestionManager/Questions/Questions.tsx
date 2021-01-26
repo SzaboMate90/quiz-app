@@ -3,14 +3,16 @@ import { connect } from 'react-redux';
 import { StyledContainer, StyledQuestion, StyledQuestionText, StyledRemoveIcon } from './Questions.style';
 import { removeQuestion } from "../../../services/Actions";
 import { BaseStateType } from "../../../services/Reducers";
-import { QuestionsType } from "../../../globalTypes";
+import { QuestionsType, TranslatorType } from "../../../globalTypes";
+import { withTranslation } from 'react-multi-lang';
 
 interface CompQuestionsType {
   dispatch : (action) => void,
+  t : TranslatorType,
   questions : QuestionsType
 }
 
-const Questions = ({ dispatch, questions } : CompQuestionsType) => {
+const Questions = ({ t, dispatch, questions } : CompQuestionsType) => {
   return (
     <StyledContainer>
       {questions.map((question, index) => {
@@ -22,7 +24,7 @@ const Questions = ({ dispatch, questions } : CompQuestionsType) => {
               {text}
             </StyledQuestionText>
             <StyledRemoveIcon
-              title={"Remove"}
+              title={t('remove')}
               size={20}
               onClick={() => dispatch(removeQuestion(index))}
             />
@@ -41,4 +43,4 @@ const mapStateToProps = (state : BaseStateType) => {
   })
 };
 
-export default connect(mapStateToProps)(Questions);
+export default connect(mapStateToProps)(withTranslation(Questions));

@@ -1,9 +1,12 @@
 import Actions, {
   AddQuestionType,
   AnswerQuestionType,
-  EditQuestionType, GlobalActionType, GoToQuestionType,
+  EditQuestionType,
+  GlobalActionType,
+  GoToQuestionType,
   RemoveQuestionType,
-  SetCorrectAnswerType, SetUserNameType
+  SetCorrectAnswerType,
+  SetUserNameType
 } from './Actions';
 import {getState, saveState, clearState} from './LocalStorage';
 import {AnswerIndexType, AnswerType, CurrentQuestionIndexType, QuestionsType, UserType} from "../globalTypes";
@@ -15,6 +18,7 @@ export interface BaseStateType {
 }
 
 const QUESTIONS_STORAGE_KEY = "questions";
+export const LANGUAGE_STORAGE_KEY = "language";
 const questionsFromStorage = getState(QUESTIONS_STORAGE_KEY);
 const defaultState : BaseStateType = {
   currentQuestionIndex : 0,

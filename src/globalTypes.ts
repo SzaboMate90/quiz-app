@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+export type TranslatorType = (text) => string;
 export type ChildrenType = React.ReactNode | string;
 export type PropsChildrenType = {
     children : ChildrenType

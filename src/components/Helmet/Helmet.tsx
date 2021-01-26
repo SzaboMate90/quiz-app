@@ -23,7 +23,7 @@ const favicons = {
 interface HelmetType {
     title : string,
     description : string,
-    lang : string,
+    lang ?: string,
     children ?: ChildrenType
 }
 export default ({ title, description, children } : HelmetType) => (

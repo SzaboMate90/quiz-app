@@ -1,20 +1,18 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
 import { StyledContainer, StyledLink } from './QuestionManager.style';
 import AddQuestion from './AddQuestion/AddQuestion';
 import Questions from './Questions/Questions';
+import { withTranslation } from 'react-multi-lang';
+import {TranslatorType} from "../../globalTypes";
 
-const QuestionManager = () => {
-  return (
+export const QuestionManager = ({ t } : { t : TranslatorType }) => (
     <StyledContainer>
-      <Questions />
-      <AddQuestion />
-      <StyledLink to={"/"}>
-        {"Let's play"}
-      </StyledLink>
+        <Questions />
+        <AddQuestion />
+        <StyledLink to={"/"}>
+            {t('lets_play')}
+        </StyledLink>
     </StyledContainer>
-  );
-};
+);
 
-
-export default connect()(QuestionManager);
+export default withTranslation(QuestionManager);

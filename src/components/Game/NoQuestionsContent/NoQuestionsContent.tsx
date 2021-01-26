@@ -1,18 +1,20 @@
 import * as React from 'react';
 import { StyledContainer, StyledIcon, StyledText, StyledLink } from './NoQuestionsContent.style';
+import { withTranslation } from 'react-multi-lang';
+import { TranslatorType } from "../../../globalTypes";
 
-const NoQuestionsContent = () => {
+const NoQuestionsContent = ({ t } : { t : TranslatorType }) => {
   return (
     <StyledContainer>
       <StyledIcon size={100} />
       <StyledText>
-        {"Currently there are no available questions yet."}
+        {t('no_questions_text1')}
       </StyledText>
       <StyledLink to={"/admin"}>
-        {"Please add some..."}
+        {t('no_questions_text2')}
       </StyledLink>
     </StyledContainer>
   );
 };
 
-export default NoQuestionsContent;
+export default withTranslation(NoQuestionsContent);

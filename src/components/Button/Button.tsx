@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { StyledButton } from './Button.style';
-import {ChildrenType} from "../../globalTypes";
+import { ChildrenType, TranslatorType } from "../../globalTypes";
 
 export interface ButtonType {
+  t ?: TranslatorType,
   children ?: ChildrenType,
   className ?: string,
   onClick : React.MouseEventHandler

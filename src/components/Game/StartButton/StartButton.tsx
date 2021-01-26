@@ -1,13 +1,16 @@
 import * as React from 'react';
 import { StyledStartButton } from './StartButton.style';
 import { ButtonType } from "../../Button/Button";
+import { withTranslation } from 'react-multi-lang';
 
-export default (props : ButtonType) => {
+export const StartButton = (props : ButtonType) => {
   return (
     <StyledStartButton
       {...props}
     >
-      {"Start game"}
+      {props.t('start_game')}
     </StyledStartButton>
   );
 };
+
+export default withTranslation(StartButton);

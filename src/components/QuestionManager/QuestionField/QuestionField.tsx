@@ -1,11 +1,14 @@
 import * as React from 'react';
 import Field, { FieldType } from '../../Field/Field';
+import { withTranslation } from 'react-multi-lang';
 
-export default (props : FieldType) => {
+export const QuestionField = (props : FieldType) => {
   return (
     <Field
       {...props}
-      placeholder={"Question"}
+      placeholder={props.t('question')}
     />
   );
 };
+
+export default withTranslation(QuestionField);

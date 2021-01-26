@@ -1,0 +1,19 @@
+{
+    "your_name": "Neved",
+    "next": "Következő",
+    "save_question": "Kérdés mentése",
+    "remove": "Törlés",
+    "question": "Kérdés",
+    "previous": "Előző",
+    "score": "Pontszám",
+    "point": "pont",
+    "points": "pont",
+    "start_game": "Kezdés",
+    "check_answer": "Ellenőrzés",
+    "manage_question": "Kérdéskezelő",
+    "error_atleast_1_asnwer": "Legalább egyet válassz kérlek",
+    "lets_play": "Játékra fel",
+    "set_correct_answer": "Beállítás Helyes válasznak",
+    "no_questions_text1": "Jelenleg nincsennek elérhető kérdések",
+    "no_questions_text2": "Kérjük adj hozzá párat"
+}

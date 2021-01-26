@@ -1,13 +1,16 @@
 import * as React from 'react';
 import { StyledSaveButton } from './SaveButton.style';
 import { ButtonType } from "../../Button/Button";
+import { withTranslation } from 'react-multi-lang';
 
-export default (props : ButtonType) => {
+export const SaveButton = (props : ButtonType) => {
   return (
     <StyledSaveButton
       {...props}
     >
-      {"Save question"}
+      {props.t('save_question')}
     </StyledSaveButton>
   );
 };
+
+export default withTranslation(SaveButton);

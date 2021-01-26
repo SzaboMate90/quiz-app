@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - 12
+
+env:
+  - CI=true
+
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
+
+install:
+  - yarn
+
+script:
+  - yarn lint
+  - yarn format:check
+  - yarn develop &
+  - until nc -z 127.0.0.1 8000; do sleep 1 ; done
+  - kill $(jobs -p) || true
+
+notifications:
+  email: false

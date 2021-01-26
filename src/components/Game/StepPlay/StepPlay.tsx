@@ -8,10 +8,12 @@ import Question from '../Question/Question';
 import Answers from '../Answers/Answers';
 import Header from "../Header/Header";
 import {answerQuestion, goToQuestion} from '../../../services/Actions';
-import {AnswerIndexType, QuestionIndexType, QuestionType} from "../../../globalTypes";
+import {AnswerIndexType, QuestionIndexType, QuestionType, TranslatorType} from "../../../globalTypes";
+import { withTranslation } from 'react-multi-lang';
 
 interface StepPlayType {
   dispatch : (action) => void,
+  t : TranslatorType,
   question : QuestionType,
   currentQuestionIndex : QuestionIndexType,
   hasPreviousButton : boolean,
@@ -70,7 +72,8 @@ class StepPlay extends React.Component<StepPlayType> {
       question,
       currentQuestionIndex,
       hasPreviousButton,
-      hasNextButton
+      hasNextButton,
+      t
     } = this.props;
     const {selectedAnswerIndex, isError} = this.state;
     const {isAnswered, text, answers} = question;
@@ -96,7 +99,7 @@ class StepPlay extends React.Component<StepPlayType> {
         </StyledMain>
         {isError ? (
           <StyledErrorMessage>
-            {"Select at least one option, please"}
+            {t('error_atleast_1_asnwer')}
           </StyledErrorMessage>
         ) : null}
         <StyledButtons>
@@ -121,7 +124,7 @@ class StepPlay extends React.Component<StepPlayType> {
           ) : null}
         </StyledButtons>
         <StyledLink to={"/admin"}>
-          {"Manage questions"}
+          {t('manage_question')}
         </StyledLink>
       </StyledContainer>
     );
@@ -142,4 +145,4 @@ const mapStateToProps = (state) => {
   })
 };
 
-export default connect(mapStateToProps)(StepPlay);
+export default connect(mapStateToProps)(withTranslation(StepPlay));

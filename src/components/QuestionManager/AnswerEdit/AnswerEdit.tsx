@@ -1,15 +1,17 @@
 import * as React from 'react';
 import { StyledContainer, StyledCorrectMark, StyledGhostCorrectMark } from './AnswerEdit.style';
 import AnswerField from "../AnswerField/AnswerField";
-import {AnswerIndexType, AnswerType} from "../../../globalTypes";
+import {AnswerIndexType, AnswerType, TranslatorType} from "../../../globalTypes";
+import { withTranslation } from 'react-multi-lang';
 
 interface AnswerEditType {
+    t : TranslatorType,
     data : AnswerType,
     index : AnswerIndexType,
-    onChange : () => {},
-    onSetCorrectAnswer : () => {}
+    onChange : (index, text) => {},
+    onSetCorrectAnswer : (index) => {}
 }
-export default ({ data, index, onChange, onSetCorrectAnswer }) => {
+export const AnswerEdit = ({ data, t, index, onChange, onSetCorrectAnswer } : AnswerEditType) => {
   const {text, isCorrect} = data;
 
   return (
@@ -25,7 +27,7 @@ export default ({ data, index, onChange, onSetCorrectAnswer }) => {
       <StyledGhostCorrectMark
         size={20}
         isGhost={true}
-        title={"Set as Correct answer"}
+        title={t('set_correct_answer')}
         onClick={(() => {
           onSetCorrectAnswer(index);
         })}
@@ -33,3 +35,5 @@ export default ({ data, index, onChange, onSetCorrectAnswer }) => {
     </StyledContainer>
   );
 };
+
+export default withTranslation(AnswerEdit);

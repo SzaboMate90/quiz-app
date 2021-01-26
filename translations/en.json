@@ -1,0 +1,19 @@
+{
+    "your_name": "Your name",
+    "next": "Next",
+    "save_question": "Save question",
+    "remove": "Remove",
+    "question": "Question",
+    "previous": "Previous",
+    "score": "Score",
+    "point": "point",
+    "points": "points",
+    "start_game": "Start game",
+    "check_answer": "Check answer",
+    "manage_question": "Manage questions",
+    "error_atleast_1_asnwer": "Select at least one option, please",
+    "lets_play": "Let's play",
+    "set_correct_answer": "Set as Correct answer",
+    "no_questions_text1": "Currently there are no available questions yet.",
+    "no_questions_text2": "Please add some..."
+}

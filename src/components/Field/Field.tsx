@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Container, Field, Label, ErrorMessage } from './Field.style';
 import { FormEventHandler } from "react";
+import { TranslatorType } from "../../globalTypes";
 
 function getRealErrorMessage(errorMessage : string, label : string, value : string, required : boolean) {
   let realErrorMessage;
@@ -16,6 +17,7 @@ function getRealErrorMessage(errorMessage : string, label : string, value : stri
 }
 const ENTER_KEYCODE = 13;
 export interface FieldType {
+    t ?: TranslatorType,
     type ?: string,
     index ?: number,
     name?: string,

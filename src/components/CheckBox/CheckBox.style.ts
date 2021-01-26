@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import Colors from '../../../styles/Colors';
-import Breakpoints from '../../../styles/Breakpoints';
+import Colors from '../../styles/Colors';
+import Breakpoints from '../../styles/Breakpoints';
 
 const getErrorStyle = () => `
   color: ${Colors.red100};

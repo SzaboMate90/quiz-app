@@ -1,16 +1,16 @@
 import * as React from 'react';
-import { Container, Input, Label, LabelText, Hint } from './CorrectAnswerCheckbox.style';
+import { Container, Input, Label, LabelText, Hint } from './CheckBox.style';
 import { FormEventHandler } from "react";
 
-interface CorrectAnswerCheckboxType {
+interface CheckBoxType {
     name : string,
     label : string,
     onChange : FormEventHandler,
     hint ?: string,
     hasError ?: boolean,
-    value : string
+    value : boolean
 }
-export default ({ name, label, onChange, hint, hasError, value } : CorrectAnswerCheckboxType) => {
+export default ({ name, label, onChange, hint, hasError, value } : CheckBoxType) => {
   const localChangeCallback = event => {
     onChange(event.target.checked);
   };

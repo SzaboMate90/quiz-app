@@ -1,20 +1,22 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { StyledContainer, StyledLabel, StyledScore } from './Score.style';
-import {UserScoreType} from "../../../globalTypes";
+import {TranslatorType, UserScoreType} from "../../../globalTypes";
 import {BaseStateType} from "../../../services/Reducers";
+import { withTranslation } from 'react-multi-lang';
 
 interface ScoreType {
-    score : UserScoreType
+    score : UserScoreType,
+    t : TranslatorType
 }
-const Score = ({ score } : ScoreType) => {
+const Score = ({ score, t } : ScoreType) => {
   return (
     <StyledContainer>
       <StyledLabel>
-        {"Score:"}
+        {t('score')}{":"}
       </StyledLabel>
       <StyledScore>
-        {score} {score < 2 ? "point" : "points"}
+        {score} {score < 2 ? t('point') : t('points')}
       </StyledScore>
     </StyledContainer>
   );
@@ -28,4 +30,4 @@ const mapStateToProps = (state : BaseStateType) => {
   })
 };
 
-export default connect(mapStateToProps)(Score);
+export default connect(mapStateToProps)(withTranslation(Score));

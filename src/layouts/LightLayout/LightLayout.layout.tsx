@@ -5,6 +5,7 @@ import { importFonts } from '../../styles/Fonts';
 import Helmet from '../../components/Helmet/Helmet';
 import Content from '../../components/Container/Container';
 import {PropsChildrenType} from "../../globalTypes";
+import LanguageSelector from "../../components/LanguageSelector/LanguageSelector";
 
 const LightLayoutLayout = ({ children } : PropsChildrenType) => (
   <StaticQuery
@@ -37,6 +38,7 @@ const LightLayoutLayout = ({ children } : PropsChildrenType) => (
           >
             {importFonts()}
           </Helmet>
+          <LanguageSelector />
           <Content>
             {children}
           </Content>

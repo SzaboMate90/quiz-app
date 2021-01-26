@@ -1,3 +1,8 @@
+// Read in environment variables based on the current `NODE_ENV`.
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Quiz app by Mate Szabo`,

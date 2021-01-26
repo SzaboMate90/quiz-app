@@ -1,13 +1,16 @@
 import * as React from 'react';
 import { StyledNextButton } from './PreviousButton.style';
 import { ButtonType } from "../../Button/Button";
+import { withTranslation } from 'react-multi-lang';
 
-export default (props : ButtonType) => {
+export const PreviousButton = (props : ButtonType) => {
   return (
     <StyledNextButton
       {...props}
     >
-      {"Previous"}
+      {props.t('previous')}
     </StyledNextButton>
   );
 };
+
+export default withTranslation(PreviousButton);
