@@ -5,22 +5,31 @@ import { action } from '@storybook/addon-actions';
 import { GlobalStyle } from '../src/layouts/LightLayout/LightLayout.style';
 import { importFonts } from '../src/styles/Fonts';
 
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import rootReducers from '../src/services/Reducers';
+import testReduxState from './testReduxState.json';
+
+const store = createStore(rootReducers, testReduxState);
+
 function withGlobalStyles(storyFn) {
   return (
-    <React.Fragment>
-      <ReachHelmet>
-        {importFonts()}
-      </ReachHelmet>
-      <GlobalStyle />
-      {storyFn()}
-    </React.Fragment>
+    <Provider store={store}>
+      <React.Fragment>
+        <ReachHelmet>
+          {importFonts()}
+        </ReachHelmet>
+        <GlobalStyle />
+        {storyFn()}
+      </React.Fragment>
+    </Provider>
   );
 }
 
 addDecorator(withGlobalStyles);
 
 // automatically import all files ending in *.stories.js
-configure(require.context('../src/components', true, /\.stories\.(jsx|js)$/), module);
+configure(require.context('../src', true, /\.stories\.(jsx|js)$/), module);
 
 // Gatsby's Link overrides:
 // Gatsby defines a global called ___loader to prevent its method calls from creating console errors you override it here

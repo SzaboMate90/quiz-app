@@ -20,14 +20,14 @@ setTranslations({HU, EN});
 setDefaultLanguage(CURRENT_STORED_LANGUAGE || DEFAULT_LANGUAGE);
 
 export default ()=> (
-    <StyledContent>
-        {LANGUAGES.map((language, index) => (
-            <StyledLink to={"#"} key={index} onClick={() => {
-                LocalStorage.saveState(LANGUAGE_STORAGE_KEY, language.code);
-                window.location.reload();
-            }}>
-                {language.text}
-            </StyledLink>
-        ))}
-    </StyledContent>
+ <StyledContent>
+     {LANGUAGES.map((language, index) => (
+      <StyledLink to={"#"} key={index} onClick={() => {
+          LocalStorage.saveState(LANGUAGE_STORAGE_KEY, language.code);
+          window.location.reload();
+      }}>
+          {language.text}
+      </StyledLink>
+     ))}
+ </StyledContent>
 );
