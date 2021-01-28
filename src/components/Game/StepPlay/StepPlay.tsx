@@ -6,7 +6,7 @@ import NextButton from '../NextButton/NextButton';
 import SendButton from '../SendButton/SendButton';
 import Question from '../Question/Question';
 import Answers from '../Answers/Answers';
-import Header from "../Header/Header";
+import Header from "../UserSection/UserSection";
 import {answerQuestion, goToQuestion} from '../../../services/Actions';
 import {AnswerIndexType, QuestionIndexType, QuestionType, TranslatorType} from "../../../globalTypes";
 import { withTranslation } from 'react-multi-lang';
@@ -124,9 +124,6 @@ class StepPlay extends React.Component<StepPlayType> {
             />
           ) : null}
         </StyledButtons>
-        <StyledLink to={"/admin"}>
-          {t('manage_question')}
-        </StyledLink>
       </StyledContainer>
     );
   }

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Colors from '../../styles/Colors';
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import Breakpoints from "../../styles/Breakpoints";
 
 export const Label = styled.label`
   color: ${Colors.pageText};
@@ -30,7 +31,11 @@ export const Field = styled.input`
   outline: none;
   padding: 10px;
   transition: border-color linear 300ms;
-  width: calc(100% - 20px);
+  width: calc(100% - 30px);
+  
+  ${Breakpoints.small(`
+    margin: 0 auto 15px auto;
+  `)}
 `;
 
 const getErrorStyle = () => `

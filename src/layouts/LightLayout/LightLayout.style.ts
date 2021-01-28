@@ -19,11 +19,6 @@ export const GlobalStyle = createGlobalStyle`
     overflow: auto;
     font-size: ${defaultFontSize}px;
     ${Scrollbar()}
-    
-    ${Breakpoints.small(`
-        width: calc(100% - 40px);
-        margin: 5px 10px;
-      `)}
   }
 `;
 

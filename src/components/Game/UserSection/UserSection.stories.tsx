@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import LanguageSelector from './LanguageSelector';
+import UserSection from './Header';
 
 export default {
-  title: 'LanguageSelector',
-  component: LanguageSelector,
+  title: 'UserSection',
+  component: UserSection,
   decorators: [withKnobs]
 };
 
 export const Default = () => (
-  <LanguageSelector />
+  <UserSection />
 );

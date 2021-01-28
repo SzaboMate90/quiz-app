@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { withKnobs, text } from '@storybook/addon-knobs';
-import Container from './Container';
+import Content from './Content';
 
 export default {
-  title: 'Container',
-  component: Container,
+  title: 'Content',
+  component: Content,
   decorators: [withKnobs]
 };
 
@@ -12,7 +12,7 @@ const label = "Container";
 const value = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
 export const Default = () => (
-  <Container>
+  <Content>
     {text(label, value)}
-  </Container>
+  </Content>
 );

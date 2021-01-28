@@ -9,9 +9,6 @@ export const QuestionManager = ({ t } : { t : TranslatorType }) => (
     <StyledContainer>
         <Questions />
         <AddQuestion />
-        <StyledLink to={"/"}>
-            {t('lets_play')}
-        </StyledLink>
     </StyledContainer>
 );
 

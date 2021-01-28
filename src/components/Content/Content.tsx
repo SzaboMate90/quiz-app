@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyledContent } from './Container.style';
+import { StyledContent } from './Content.style';
 import {PropsChildrenType} from "../../globalTypes";
 
 export default ({ children } : PropsChildrenType)=> (

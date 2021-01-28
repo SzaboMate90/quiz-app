@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Link from "../../Link/Link";
+import Breakpoints from "../../../styles/Breakpoints";
 
 export const StyledContainer = styled.article`
   
@@ -20,4 +21,8 @@ export const StyledButtons = styled.section`
 `;
 export const StyledMain = styled.section`
   ${props => props.isAnswered ? `` : null}
+  
+  ${Breakpoints.global(`
+    padding: 0 15px;
+  `)}
 `;

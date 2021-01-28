@@ -3,5 +3,5 @@ import Colors from '../../styles/Colors';
 
 export const StyledContainer = styled.p`
   color: ${Colors.red100};
-  margin: 0;
+  margin: 10px 0;
 `;

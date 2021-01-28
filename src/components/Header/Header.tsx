@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { StyledContent, StyledLink } from './LanguageSelector.style';
-import { setTranslations, setDefaultLanguage } from 'react-multi-lang';
+import { StyledContent, StyledLinks, StyledLink } from './Header.style';
+import {setTranslations, setDefaultLanguage, withTranslation} from 'react-multi-lang';
 import EN from '../../translations/en.json';
 import HU from '../../translations/hu.json';
 import LocalStorage from "../../services/LocalStorage";
@@ -19,7 +19,7 @@ const CURRENT_STORED_LANGUAGE = LocalStorage.getState(LANGUAGE_STORAGE_KEY);
 setTranslations({HU, EN});
 setDefaultLanguage(CURRENT_STORED_LANGUAGE || DEFAULT_LANGUAGE);
 
-export default ()=> (
+export const Header = ({ t }) => (
  <StyledContent>
      {LANGUAGES.map((language, index) => (
       <StyledLink to={"#"} key={index} onClick={() => {
@@ -29,5 +29,15 @@ export default ()=> (
           {language.text}
       </StyledLink>
      ))}
+     <StyledLinks>
+       <StyledLink to={"/admin"}>
+        {t('manage_question')}
+       </StyledLink>
+       <StyledLink to={"/"}>
+        {t('lets_play')}
+       </StyledLink>
+     </StyledLinks>
  </StyledContent>
 );
+
+export default withTranslation(Header);

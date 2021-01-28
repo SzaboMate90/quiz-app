@@ -3,9 +3,9 @@ import { StaticQuery, graphql } from 'gatsby';
 import { GlobalStyle, Layout } from './LightLayout.style';
 import { importFonts } from '../../styles/Fonts';
 import Helmet from '../../components/Helmet/Helmet';
-import Content from '../../components/Container/Container';
+import Content from '../../components/Content/Content';
 import {PropsChildrenType} from "../../globalTypes";
-import LanguageSelector from "../../components/LanguageSelector/LanguageSelector";
+import Header from "../../components/Header/Header";
 
 const LightLayoutLayout = ({ children } : PropsChildrenType) => (
   <StaticQuery
@@ -38,7 +38,7 @@ const LightLayoutLayout = ({ children } : PropsChildrenType) => (
           >
             {importFonts()}
           </Helmet>
-          <LanguageSelector />
+          <Header />
           <Content>
             {children}
           </Content>
