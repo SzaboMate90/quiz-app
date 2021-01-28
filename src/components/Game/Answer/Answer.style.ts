@@ -3,7 +3,7 @@ import { QuestionAnswer, Close } from '@styled-icons/material';
 import { CheckCircle } from '@styled-icons/boxicons-regular';
 import Breakpoints from "../../../styles/Breakpoints";
 
-export const StyledContainer = styled.p`
+export const StyledContainer = styled.article`
   display: inline-block;
   border-radius: 8px;
   padding: 8px;

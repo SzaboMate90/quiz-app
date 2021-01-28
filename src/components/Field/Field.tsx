@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container, Field, Label, ErrorMessage } from './Field.style';
+import { Container, Field, Label, StyledErrorMessage } from './Field.style';
 import { FormEventHandler } from "react";
 import { TranslatorType } from "../../globalTypes";
 
@@ -63,9 +63,9 @@ export default ({ type, name, label, errorMessage, className, placeholder, value
         onKeyUp={localCheckIfSubmitCallback}
       />
       {realErrorMessage ? (
-        <ErrorMessage>
+        <StyledErrorMessage>
           {realErrorMessage}
-        </ErrorMessage>
+        </StyledErrorMessage>
       ) : null}
     </Container>
   )

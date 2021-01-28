@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Link from "../../Link/Link";
 
-export const StyledContainer = styled.div`
+export const StyledContainer = styled.article`
   
 `;
 
@@ -9,7 +9,7 @@ export const StyledLink = styled(Link)`
   float: right;
 `;
 
-export const StyledButtons = styled.div`
+export const StyledButtons = styled.section`
   text-align: center;
   
   &:after {
@@ -18,11 +18,6 @@ export const StyledButtons = styled.div`
     clear: both;
   }
 `;
-export const StyledMain = styled.div`
+export const StyledMain = styled.section`
   ${props => props.isAnswered ? `` : null}
-`;
-
-export const StyledErrorMessage = styled.div`
-  color: red;
-  margin-bottom: 10px;
 `;

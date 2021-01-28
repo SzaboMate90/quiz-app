@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { QuestionMark, CheckCircle } from '@styled-icons/boxicons-regular';
 import { Close } from '@styled-icons/material';
 
-export const StyledContainer = styled.p`
+export const StyledContainer = styled.section`
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     padding: 8px;

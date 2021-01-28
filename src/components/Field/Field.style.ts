@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Colors from '../../styles/Colors';
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 export const Label = styled.label`
   color: ${Colors.pageText};
@@ -39,8 +40,7 @@ const getErrorStyle = () => `
   }
 `;
 
-export const ErrorMessage = styled.p`
-  color: ${Colors.red100};
+export const StyledErrorMessage = styled(ErrorMessage)`
   font-size: 11px;
   margin: -10px 0 15px 0;
 `;

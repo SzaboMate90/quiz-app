@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { StyledContent, StyledLink } from './LanguageSelector.style';
 import { setTranslations, setDefaultLanguage } from 'react-multi-lang';
-import EN from '../../../translations/en.json';
-import HU from '../../../translations/hu.json';
+import EN from '../../translations/en.json';
+import HU from '../../translations/hu.json';
 import LocalStorage from "../../services/LocalStorage";
 import {LANGUAGE_STORAGE_KEY} from "../../services/Reducers";
 

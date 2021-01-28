@@ -5,11 +5,6 @@ export const StyledContainer = styled.article`
   padding: 15px;
 `;
 
-export const StyledAnswers = styled.article`
+export const StyledAnswers = styled.section`
   
-`;
-
-export const StyledErrorMessage = styled.div`
-  color: red;
-  margin: 10px 0;
 `;

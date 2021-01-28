@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { StyledContainer, StyledErrorMessage } from './StepStart.style';
+import { StyledContainer } from './StepStart.style';
 import NameField from '../NameField/NameField';
 import StartButton from '../StartButton/StartButton';
 import {setUserName} from '../../../services/Actions';
 import {UserNameType} from "../../../globalTypes";
+import ErrorMessage from "../../ErrorMessage/ErrorMessage";
 
 interface StepStartType {
   dispatch : (action) => void
@@ -56,9 +57,9 @@ class StepStart extends React.Component<StepStartType> {
           value={userName}
         />
         {errorMessage ? (
-          <StyledErrorMessage>
+          <ErrorMessage>
             {errorMessage}
-          </StyledErrorMessage>
+          </ErrorMessage>
         ) : null}
         <StartButton onClick={this.onNextButtonClicked} />
       </StyledContainer>

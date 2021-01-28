@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { StyledContainer, StyledErrorMessage, StyledAnswers } from './AddQuestion.style';
+import { StyledContainer, StyledAnswers } from './AddQuestion.style';
 import { addQuestion } from '../../../services/Actions';
 import QuestionField from "../QuestionField/QuestionField";
 import AnswerEdit from "../AnswerEdit/AnswerEdit";
 import SaveButton from "../SaveButton/SaveButton";
 import {AnswerIndexType, AnswersType} from "../../../globalTypes";
+import ErrorMessage from "../../ErrorMessage/ErrorMessage";
 
 interface AddQuestionBaseState {
   text : string,
@@ -125,9 +126,9 @@ class AddQuestion extends React.Component<AddQuestionType> {
           ))}
         </StyledAnswers>
         {errorMessage ? (
-          <StyledErrorMessage>
+          <ErrorMessage>
             {errorMessage}
-          </StyledErrorMessage>
+          </ErrorMessage>
         ) : null}
         <SaveButton
           onClick={this.onAddButtonClicked}

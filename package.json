@@ -8,6 +8,7 @@
     "@styled-icons/boxicons-regular": "^10.23.0",
     "@styled-icons/material": "^10.23.0",
     "babel-plugin-styled-components": "^1.12.0",
+    "cypress": "^6.3.0",
     "express": "^4.17.1",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.5.0",
@@ -55,11 +56,11 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean && yarn delete-compiled-js-files",
-    "open": "yarn clean && yarn i18n && yarn build && yarn serve",
+    "open": "yarn clean && yarn src/i18n && yarn build && yarn serve",
     "storybook": "tsc && start-storybook -p 6006 --ci",
     "storybook:build": "tsc && build-storybook",
     "type-check": "tsc --noEmit",
-    "i18n": "node ./i18n/generateLanguageFiles.js"
+    "i18n": "node src/i18n/generateLanguageFiles.js"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { StyledContainer, StyledMain, StyledErrorMessage, StyledButtons, StyledLink } from './StepPlay.style';
+import { StyledContainer, StyledMain, StyledButtons, StyledLink } from './StepPlay.style';
 import PreviousButton from '../PreviousButton/PreviousButton';
 import NextButton from '../NextButton/NextButton';
 import SendButton from '../SendButton/SendButton';
@@ -10,6 +10,7 @@ import Header from "../Header/Header";
 import {answerQuestion, goToQuestion} from '../../../services/Actions';
 import {AnswerIndexType, QuestionIndexType, QuestionType, TranslatorType} from "../../../globalTypes";
 import { withTranslation } from 'react-multi-lang';
+import ErrorMessage from "../../ErrorMessage/ErrorMessage";
 
 interface StepPlayType {
   dispatch : (action) => void,
@@ -98,9 +99,9 @@ class StepPlay extends React.Component<StepPlayType> {
           />
         </StyledMain>
         {isError ? (
-          <StyledErrorMessage>
+          <ErrorMessage>
             {t('error_atleast_1_asnwer')}
-          </StyledErrorMessage>
+          </ErrorMessage>
         ) : null}
         <StyledButtons>
           {hasPreviousButton ? (
