@@ -56,11 +56,11 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean && yarn delete-compiled-js-files",
-    "open": "yarn clean && yarn src/i18n && yarn build && yarn serve",
+    "open": "yarn clean && yarn i18n && yarn build && yarn serve",
     "storybook": "tsc && start-storybook -p 6006 --ci",
     "storybook:build": "tsc && build-storybook",
     "type-check": "tsc --noEmit",
-    "i18n": "node src/i18n/generateLanguageFiles.js"
+    "i18n": "node src/i18n/generateLanguageFiles.ts"
   },
   "repository": {
     "type": "git",
