@@ -50,3 +50,5 @@ glob(path.join(__dirname, "./SOURCE/*.json"), (err, files) => {
 });
 
 console.log("Language files generated");
+
+export {};
