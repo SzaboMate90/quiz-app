@@ -11,7 +11,7 @@ if (!fs.existsSync(path.join(__dirname, "./shouldTranslate"))) {
 glob(path.join(__dirname, "./SOURCE/*.json"), (err, files) => {
   fs.readFile(path.join(__dirname, "./SOURCE/" + mainLangFile), "utf8", (err2, engData) => {
 		let engJsonObj = JSON.parse(engData);
-console.log(files)
+
 		files.forEach(file => {
 			let fileName = file.substring(file.length - 7);
 			
